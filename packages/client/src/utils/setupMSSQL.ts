@@ -19,6 +19,7 @@ function getMSSQLConfig(url: string): mssql.config {
       max: 1,
     },
     options: {
+      multiSubnetFailover: connectionUrl.multiSubnetFailover === 'true',
       enableArithAbort: false,
       trustServerCertificate: true, // change to true for local dev / self-signed certs
     },
